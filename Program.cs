@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace primeira_aula
 {
@@ -6,89 +7,40 @@ namespace primeira_aula
     {
         static void Main(string[] args)
         {
-            // var text = "";
-            // text = "0";
-
-            var currentDate = DateTime.Now;
-            var currentDate2 = DateTime.Now;
-
-            bool datesEquals = currentDate == currentDate2;
-            
-            // Console.WriteLine(currentDate);
-            System.Console.WriteLine();
-
-            // int userAge = Int32.Parse(result);
-            
-            // bool isLegalAge = userAge >= 18;
-
-            
-            // bool isDifferent = result != "olá";
-
-            // bool abc = isEquals == isDifferent;
-
-            // Console.WriteLine("Verificando se o texto é diferente de olá");
-            // string result = Console.ReadLine();
-
-            // bool boolean = false;
-
-            // bool abc = !boolean;
-
-            // Console.WriteLine("Verificando se você se chama jonas e tem 16 anos");
-            // Console.WriteLine("Qual o seu nome?");
-            // string userName = Console.ReadLine();
-            // bool userIsJonas = userName == "jonas";
-
             // Console.WriteLine("Qual a sua idade?");
-            // string userAge = Console.ReadLine();
-            // var userIs16 = userAge == "16";
+            // var result = Console.ReadLine();
+            // int userAge = Int32.Parse(result);
 
-            // // Console.WriteLine("Qual sua profissão?");
-            // // string userProfession = Console.ReadLine();
-            // // bool userIsProgrammer = userProfession == "programador";
-
-            // bool userIsJonasAndIs16AndIsProgrammer = userIsJonas || userIs16;
-            // Console.WriteLine(userIsJonasAndIs16AndIsProgrammer);
-
-            // System.Console.WriteLine("Logando o RESTO da divisao 3 / 2");
-
-            // int result = 6 % 2;
-            // System.Console.WriteLine(result);
-
-            // System.Console.WriteLine("Digite seu nome");
-            // var userName = Console.ReadLine();
-
-            // bool isJose = userName == "José";
-            // if (isJose)
+            // if (userAge > 15 && userAge < 51)
             // {
-            //     Console.WriteLine("Olá, José");
+            //     Console.WriteLine("Você tem idade para o Entra21");
+            // }
+            // else if (userAge == 14 || userAge == 15)
+            // {
+            //     Console.WriteLine("Você não tem idade para o Entra21, mas tem para ser menor aprendiz");
             // }
             // else
             // {
-            //   Console.WriteLine($"Olá, {userName}");
+            //     Console.WriteLine("Você NÃO tem idade nem para o Entra21 e nem para ser menor aprendiz");
             // }
 
-            // Console.WriteLine("Como vai você?");
+            // Console.WriteLine("Até mais!");
 
+            var names = new string[3];
+            var counter = 0;
 
-
-            Console.WriteLine("Qual a sua idade?");
-            var result = Console.ReadLine();
-            int userAge = Int32.Parse(result);
-
-            if (userAge > 15 && userAge < 51)
+            while (counter < 3)
             {
-                Console.WriteLine("Você tem idade para o Entra21");
-            }
-            else if (userAge == 14 || userAge == 15)
-            {
-                Console.WriteLine("Você não tem idade para o Entra21, mas tem para ser menor aprendiz");
-            }
-            else
-            {
-                Console.WriteLine("Você NÃO tem idade nem para o Entra21 e nem para ser menor aprendiz");
+                System.Console.WriteLine("Digite um nome");
+                var result = Console.ReadLine();
+                
+                names[counter] = result;
+                counter++;
             }
 
-            Console.WriteLine("Até mais!");
+            System.Console.WriteLine($"Olá, {names[0]}!");
+            System.Console.WriteLine($"Olá, {names[1]}!");
+            System.Console.WriteLine($"Olá, {names[2]}!");
         }
     }
 }

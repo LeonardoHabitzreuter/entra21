@@ -15,7 +15,7 @@
     string text = "meu texto"
     const string text = "meu texto"
 
-### Tipos básicos
+### Tipos de variáveis
     // Tipo numérico/int
     var number = 1
 
@@ -31,9 +31,17 @@
     // Tipo Data/DateTime
     var currentDate = DateTime.Now;
 
+    // Lista/Array de 3 posições
+    var names = new string[3];
+    names[0] = "Lucas";
+    // names terá o valor Lucas na posição de número 0
+
 ### Parsers / Transformadores
     // Transformar um texto/string em um número/int
     var userAge = Int32.Parse(result);
+
+    // Transformar um texto/string em um número com ponto flutuante/double
+    double price = Double.Parse(result);
 
 ### Operadores de comparação
 #### (toda comparação retorna um booleano/bool)
@@ -90,6 +98,12 @@
     // Resto
     3 % 2;
     // vai retornar 1
+    
+    // Incrementando uma variável (2 vezes)
+    var counter = 0;
+    var counter++;
+    var counter += 1;
+    // counter terá o valor 2
 
 ### Blocos condicionais
     // Escrevendo olá SOMENTE quando 1 > 0
@@ -107,6 +121,15 @@
     {
        Console.WriteLine("Xau!")
     }
+
+### Laços de repetição
+    // while
+    while (true)
+    {
+        Console.WriteLine("Olá!");
+    }
+    // Dirá olá repetidamente
+    
 
 ### Comandos do editor
 Selecionando o texto:
