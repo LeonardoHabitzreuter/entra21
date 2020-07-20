@@ -43,6 +43,10 @@
     // Transformar um texto/string em um número com ponto flutuante/double
     double price = Double.Parse(result);
 
+    // Formatar número/double para até duas casas decimais após a vírgula
+    25.658499.ToString("0.00")
+    // 25.66
+
 ### Operadores de comparação
 #### (toda comparação retorna um booleano/bool)
     // É igual?
@@ -129,7 +133,12 @@
         Console.WriteLine("Olá!");
     }
     // Dirá olá repetidamente
-    
+
+    // forçando para que um laço de repetição pare
+    while (true)
+    {
+        break;
+    }
 
 ### Comandos do editor
 Selecionando o texto:
