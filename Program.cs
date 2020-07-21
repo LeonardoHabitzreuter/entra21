@@ -167,7 +167,7 @@ namespace primeira_aula
 
 		static void Main(string[] args)
 		{
-			Exercise6();
+            Exercise6();
 		}
 	}
 }

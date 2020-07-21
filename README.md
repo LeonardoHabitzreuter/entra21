@@ -32,7 +32,7 @@
     var currentDate = DateTime.Now;
 
     // Lista/Array de 3 posições
-    var names = new string[3];
+    var names = new string[1];
     names[0] = "Lucas";
     // names terá o valor Lucas na posição de número 0
 
