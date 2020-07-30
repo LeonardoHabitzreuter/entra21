@@ -109,6 +109,11 @@
     var counter += 1;
     // counter terá o valor 2
 
+    // Decrementando uma variável
+    var counter = 10;
+    var counter--;
+    // counter terá o valor 9
+
 ### Blocos condicionais
     // Escrevendo olá SOMENTE quando 1 > 0
     if (1 > 0)

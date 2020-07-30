@@ -8,10 +8,11 @@ namespace primeira_aula
 		{
 			var increment = 1;
 
-			System.Console.WriteLine("crescente");
+			Console.WriteLine("crescente");
+			
 			while (increment < 11)
 			{
-				System.Console.WriteLine(increment);
+				Console.WriteLine(increment);
 				increment++;
 			}
 
@@ -28,11 +29,7 @@ namespace primeira_aula
 			System.Console.WriteLine("apenas os pares");
 			while (counter < 11)
 			{
-				if (counter % 2 == 0)
-				{
-					System.Console.WriteLine(counter);
-				}
-				counter++;
+				counter =+ 2;
 			}
 		}
 
@@ -167,7 +164,7 @@ namespace primeira_aula
 
 		static void Main(string[] args)
 		{
-            Exercise6();
+            Exercise1();
 		}
 	}
 }
