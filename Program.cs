@@ -29,7 +29,7 @@ namespace primeira_aula
 			System.Console.WriteLine("apenas os pares");
 			while (counter < 11)
 			{
-				counter =+ 2;
+				counter += 2;
 			}
 		}
 
@@ -54,18 +54,15 @@ namespace primeira_aula
 
 			while (counter < 200)
 			{
-				if (counter % 2 == 1)
-				{
-					System.Console.WriteLine(counter);
-				}
-				counter++;
+				System.Console.WriteLine(counter);
+				counter += 2;
 			}
 		}
 
 		static void Exercise4()
 		{
 			var sum = 0.0;
-			var counter = 0.0;
+			var counter = 0;
 
 			while (true)
 			{
@@ -82,8 +79,8 @@ namespace primeira_aula
 				sum += Int32.Parse(result);
 			}
 
-			System.Console.WriteLine("A média da turma é:");
-			System.Console.WriteLine((sum / counter).ToString("0.00"));
+			var average = (sum / counter).ToString("0.00");
+			System.Console.WriteLine($"A média da turma é: {average}");
 		}
 
 		static void Exercise5()
@@ -164,7 +161,7 @@ namespace primeira_aula
 
 		static void Main(string[] args)
 		{
-            Exercise1();
+            Exercise4();
 		}
 	}
 }
