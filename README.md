@@ -31,10 +31,14 @@
     // Tipo Data/DateTime
     var currentDate = DateTime.Now;
 
-    // Lista/Array de 3 posições
+    // Lista/Array de 1 posição
     var names = new string[1];
     names[0] = "Lucas";
     // names terá o valor Lucas na posição de número 0
+
+    
+    // Tupla/Tuple
+    (string name, int votes) firstCandidate = ("", 0)
 
 ### Parsers / Transformadores
     // Transformar um texto/string em um número/int
@@ -68,6 +72,11 @@
     // Booleano da esquerda ou o da direita é true?
     false || false || true;
     // vai retornar true
+
+    // Operador ternário
+    var myBool = true;
+    var message = myBool ? "Solteiro" : "Não solteiro";
+    // retornará "Solteiro" quando myBool for True ou "Não solteiro quando for False
 
 ### Operadores de comparação para números/matemática
     // É maior?
