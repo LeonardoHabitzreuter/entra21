@@ -154,6 +154,19 @@
         break;
     }
 
+### Capturando exceções
+    Console.WriteLine("Forneça um número");
+    string firstInput = Console.ReadLine();
+    
+    try
+    {
+        var firstNumber = Int32.Parse(firstInput);
+    }
+    catch (System.Exception)
+    {
+        System.Console.WriteLine("O números está em formato inválido");
+    }
+
 ### Comandos do editor
 Selecionando o texto:
 Segurar a tecla shift e utilizar as setas

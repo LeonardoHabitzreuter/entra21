@@ -125,7 +125,7 @@ namespace primeira_aula
 				System.Console.WriteLine($"{votesMode}) Votar");
 				System.Console.WriteLine($"{resultMode}) Apuração dos votos");
 				var mode = Console.ReadLine();
-				
+
 				if (mode == resultMode)
 				{
 					break;
@@ -140,11 +140,11 @@ namespace primeira_aula
 						password = Console.ReadLine();
 					}
 
-					System.Console.WriteLine("Digite o nome do primeiro candidato");
-					candidates[0].name = Console.ReadLine();
-
-					System.Console.WriteLine("Digite o nome do segundo candidato");
-					candidates[1].name = Console.ReadLine();
+                    for (int i = 0; i < candidates.Length; i++)
+                    {                   
+                        System.Console.WriteLine($"Digite o nome do candidato nº{i + 1}");
+                        candidates[i].name = Console.ReadLine();
+                    }
 				}
 
 				if (mode == votesMode)
@@ -162,10 +162,115 @@ namespace primeira_aula
 			}
 			else
 			{
-				var winner = candidates[0].votes > candidates[1].votes ? candidates[0] : candidates[1];
+				var winner = candidates[0];
+                for (int i = 1; i < candidates.Length; i++)
+                {
+                    var currentCandidate = candidates[i];
+                    if (currentCandidate.votes > winner.votes)
+                    {
+                        winner = currentCandidate;
+                    }
+                }
+
 				System.Console.WriteLine($"O vencedor é: {winner.name}");
 				System.Console.WriteLine($"Com o total de: {winner.votes} votos!");
 			}
+		}
+
+		static void Exercise9()
+		{
+            Console.WriteLine("Forneça um número");
+            var firstNumber = Double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Forneça um número");
+            var secondNumber = Double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Forneça um número");
+            var thirdNumber = Double.Parse(Console.ReadLine());
+
+            if (firstNumber > (secondNumber + thirdNumber))
+            {
+                Console.WriteLine("O primeiro número é maior que a soma dos demais");
+            }
+            else
+            {
+                Console.WriteLine("O primeiro número NAO é maior que a soma dos demais");
+            }
+		}
+
+		static void Exercise11()
+		{
+            var firstNumber = 0;
+            Console.WriteLine("Forneça um número");
+            var firstInput = Console.ReadLine();
+            
+            var secondNumber = 0;
+            Console.WriteLine("Forneça um número");
+            var secondInput = Console.ReadLine();
+            
+            try
+            {
+                firstNumber = Int32.Parse(firstInput);
+                secondNumber = Int32.Parse(secondInput);
+            }
+            catch (System.Exception)
+            {
+                System.Console.WriteLine("Um dos números está em formato inválido");
+                System.Console.WriteLine("Tente novamente com outros números");
+            }
+
+            if (secondNumber != 0)
+            {
+                System.Console.WriteLine(firstNumber / secondNumber);
+            }
+            else
+            {
+                System.Console.WriteLine("DIVISÃO POR ZERO");
+            }
+		}
+
+		static void Exercise13()
+		{
+            var biggestNumber = 0;
+
+            for (int counter = 0; counter < 10; counter++)
+            {
+                System.Console.WriteLine("Forneça um número");
+                var input = Int32.Parse(Console.ReadLine());
+
+                if (input > biggestNumber)
+                {
+                    biggestNumber = input;
+                }
+            }
+
+            System.Console.WriteLine("O maior número é:");
+            System.Console.WriteLine(biggestNumber);
+		}
+
+		static void Exercise14()
+		{
+            
+		}
+
+		static void Exercise17()
+		{
+            while (true)
+            {
+                Console.WriteLine("Forneça um número");
+                var input = Int32.Parse(Console.ReadLine());
+
+                if (input == -1)
+                {
+                    break;
+                }
+
+                Console.WriteLine("Tabuada:");
+                for (var i = 1; i < 11; i++)
+                {
+                    Console.WriteLine(input * i);
+                }
+            }
 		}
 
 		static void Main(string[] args)
