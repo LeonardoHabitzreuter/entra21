@@ -146,12 +146,26 @@
     {
         Console.WriteLine("Olá!");
     }
-    // Dirá olá repetidamente
+    // Dirá olá infinitamente
 
     // forçando para que um laço de repetição pare
     while (true)
     {
         break;
+    }
+
+    // continuando o looping pulando o restante do código
+    while (true)
+    {
+        continue;
+
+        ....
+    }
+
+    // for (imprimindo de 0 a 9)
+    for (int counter = 0; counter < 10; counter++)
+    {
+        System.Console.WriteLine(counter);
     }
 
 ### Capturando exceções

@@ -6,43 +6,36 @@ namespace primeira_aula
 	{
 		static void Exercise1()
 		{
-			var increment = 1;
-
 			Console.WriteLine("crescente");
-			
-			while (increment < 11)
-			{
-				Console.WriteLine(increment);
-				increment++;
-			}
-
-			var decrement = 10;
+            
+            for (int counter = 1; counter < 11; counter++)
+            {
+				Console.WriteLine(counter);
+            }
 
 			System.Console.WriteLine("decrescente");
-			while (decrement > 0)
-			{
-				System.Console.WriteLine(decrement);
-				decrement--;
-			}
 
-			var counter = 2;
+            for (int counter = 10; counter > 0; counter--)
+            {
+				System.Console.WriteLine(counter);   
+            }
+
 			System.Console.WriteLine("apenas os pares");
-			while (counter < 11)
-			{
-				counter += 2;
-			}
+
+            for (int counter = 2; counter < 11; counter += 2)
+            {
+                System.Console.WriteLine(counter);
+            }
 		}
 
 		static void Exercise2()
 		{
-			var counter = 1;
 			var sum = 0;
 
-			while (counter < 101)
-			{
+            for (int counter = 1; counter < 101; counter++)
+            {
 				sum += counter;
-				counter++;
-			}
+            }
 
 			System.Console.WriteLine("a soma dos números inteiros entre 1 e 100 é");
 			System.Console.WriteLine(sum);
@@ -50,46 +43,38 @@ namespace primeira_aula
 
 		static void Exercise3()
 		{
-			var counter = 1;
-
-			while (counter < 200)
-			{
+            for (int counter = 1; counter < 200; counter += 2)
+            {
 				System.Console.WriteLine(counter);
-				counter += 2;
-			}
+            }
 		}
 
 		static void Exercise4()
 		{
 			var sum = 0.0;
-			var counter = 0;
 
-			while (true)
-			{
-				System.Console.WriteLine("Digite uma idade");
+            for (int counter = 0; true; counter++)
+            {
+                System.Console.WriteLine("Digite uma idade");
 				var result = Console.ReadLine();
 
 				if (result == "0")
 				{
+                    var average = (sum / counter).ToString("0.00");
+			        System.Console.WriteLine($"A média da turma é: {average}");
 					break;
 				}
 				
-				counter++;
-				
 				sum += Int32.Parse(result);
-			}
-
-			var average = (sum / counter).ToString("0.00");
-			System.Console.WriteLine($"A média da turma é: {average}");
+            }
 		}
 
 		static void Exercise5()
 		{
 			var womenBetween18And35 = 0;
-			var counter = 0;
 
-			while (counter < 5)
-			{
+            for (int counter = 0; counter < 5; counter++)
+            {
 				System.Console.WriteLine("Qual é o seu nome?");
 				Console.ReadLine();
 
@@ -100,9 +85,7 @@ namespace primeira_aula
 				{
 					womenBetween18And35++;
 				}
-
-				counter++;
-			}
+            }
 
 			System.Console.WriteLine("Porcentagem de mulheres que tem entre 18 e 35 anos");
 
@@ -250,7 +233,39 @@ namespace primeira_aula
 
 		static void Exercise14()
 		{
-            
+            var smaller = Double.MaxValue;
+            var middle = 0.0;
+            var greater = 0.0;
+
+            for (int i = 0; i < 3; i++)
+            {
+                System.Console.WriteLine("Forneça um número");
+                var input = Double.Parse(Console.ReadLine());
+
+                if (input < smaller)
+                {
+                    if (i == 0)
+                    {
+                        smaller = input;
+                    }
+                    greater = middle;
+                    middle = smaller;
+                    smaller = input;
+                }
+                else if (input > middle)
+                {
+                    middle = greater;
+                    greater = input;
+                }
+                else
+                {
+                    middle = input;
+                }
+            }
+
+            System.Console.WriteLine(smaller);
+            System.Console.WriteLine(middle);
+            System.Console.WriteLine(greater);
 		}
 
 		static void Exercise17()
@@ -275,7 +290,7 @@ namespace primeira_aula
 
 		static void Main(string[] args)
 		{
-            Exercise6();
+            Exercise14();
 		}
 	}
 }
