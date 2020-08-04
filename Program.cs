@@ -233,7 +233,7 @@ namespace primeira_aula
 
 		static void Exercise14()
 		{
-            var smaller = Double.MaxValue;
+            var smaller = 0.0;
             var middle = 0.0;
             var greater = 0.0;
 
@@ -242,24 +242,20 @@ namespace primeira_aula
                 System.Console.WriteLine("Forneça um número");
                 var input = Double.Parse(Console.ReadLine());
 
-                if (input < smaller)
+                if (input > greater)
                 {
-                    if (i == 0)
-                    {
-                        smaller = input;
-                    }
-                    greater = middle;
-                    middle = smaller;
-                    smaller = input;
-                }
-                else if (input > middle)
-                {
+                    smaller = middle;
                     middle = greater;
                     greater = input;
                 }
+                else if (input > middle)
+                {
+                    smaller = middle;
+                    middle = input;
+                }
                 else
                 {
-                    middle = input;
+                    smaller = input;
                 }
             }
 
