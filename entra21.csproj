@@ -3,7 +3,9 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>entra21</RootNamespace>
+    <StartupObject>getting_started.Program</StartupObject>
+    <!-- <StartupObject>arrays.Array</StartupObject> -->
+    <!-- <StartupObject>arrays.Array2</StartupObject> -->
   </PropertyGroup>
 
 </Project>
