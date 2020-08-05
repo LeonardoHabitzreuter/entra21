@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace primeira_aula
+namespace getting_started
 {
 	class Program
 	{
@@ -99,7 +99,7 @@ namespace primeira_aula
 			const string votesMode = "2";
 			const string resultMode = "3";
 
-			var candidates = new (string name, int votes)[2];
+            var candidates = new (string name, int votes)[3];
 			
 			while (true)
 			{
@@ -132,29 +132,42 @@ namespace primeira_aula
 
 				if (mode == votesMode)
 				{
-					System.Console.WriteLine($"Vote 1 para o candidato: {candidates[0].name} ou 2 para o candidato: {candidates[1].name}");
-					
+                    for (int i = 0; i < candidates.Length; i++)
+                    {
+					    System.Console.WriteLine($"Vote {i + 1} para o candidato: {candidates[i].name}"); 
+                    }
+
 					var vote = Int32.Parse(Console.ReadLine());
 					candidates[vote - 1].votes++;
 				}
 			}
 
-			if (candidates[0].votes == candidates[1].votes)
+            var winner = candidates[0];
+            var isDraw = false;
+            var drawCandidates = winner.name;
+
+            for (int i = 1; i < candidates.Length; i++)
+            {
+                var currentCandidate = candidates[i];
+
+                if (currentCandidate.votes > winner.votes)
+                {
+                    winner = currentCandidate;
+                    drawCandidates = currentCandidate.name;
+                }
+                else if (currentCandidate.votes == winner.votes)
+                {
+                    isDraw = true;
+                    drawCandidates += $", {currentCandidate.name}";
+                }
+            }
+
+			if (isDraw)
 			{
-				System.Console.WriteLine("Segundo turno!");
+				System.Console.WriteLine($"Segundo turno entre: {drawCandidates}!");
 			}
 			else
 			{
-				var winner = candidates[0];
-                for (int i = 1; i < candidates.Length; i++)
-                {
-                    var currentCandidate = candidates[i];
-                    if (currentCandidate.votes > winner.votes)
-                    {
-                        winner = currentCandidate;
-                    }
-                }
-
 				System.Console.WriteLine($"O vencedor é: {winner.name}");
 				System.Console.WriteLine($"Com o total de: {winner.votes} votos!");
 			}
@@ -233,9 +246,9 @@ namespace primeira_aula
 
 		static void Exercise14()
 		{
-            var smaller = 0.0;
-            var middle = 0.0;
-            var greater = 0.0;
+            var smaller = Double.MinValue;
+            var middle = Double.MinValue;
+            var greater = Double.MinValue;
 
             for (int i = 0; i < 3; i++)
             {
@@ -283,10 +296,10 @@ namespace primeira_aula
                 }
             }
 		}
-
-		static void Main(string[] args)
+        
+        static void Main(string[] args)
 		{
-            Exercise14();
+            Exercise6();
 		}
 	}
 }

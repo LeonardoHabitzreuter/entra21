@@ -168,6 +168,12 @@
         System.Console.WriteLine(counter);
     }
 
+    // foreach (imprimindo todos os elementos do array "numbers")
+    foreach (var item in numbers)
+    {
+        Console.WriteLine(item);
+    }
+
 ### Capturando exceções
     Console.WriteLine("Forneça um número");
     string firstInput = Console.ReadLine();
