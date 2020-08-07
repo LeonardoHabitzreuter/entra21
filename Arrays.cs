@@ -91,9 +91,56 @@ namespace arrays
             }
 		}
 
+		static void Exercise4()
+		{
+            const int arraysLenght = 3;
+            
+            var a = new double?[arraysLenght];
+            var b = new double[arraysLenght];
+
+            System.Console.WriteLine($"Digite os {arraysLenght} primeiros valores");
+
+            for (int i = 0; i < arraysLenght; i++)
+            {
+                System.Console.WriteLine("Digite um valor:");
+                a[i] = Double.Parse(Console.ReadLine());
+            }
+
+            System.Console.WriteLine($"Digite os próximos {arraysLenght} valores");
+
+            var arraysAreEquals = true;
+
+            for (int i = 0; i < arraysLenght; i++)
+            {
+                System.Console.WriteLine("Digite um valor:");
+                var result = Double.Parse(Console.ReadLine());
+                b[i] = result;
+
+                var hasEquals = false;
+
+                for (int j = 0; j < a.Length; j++)
+                {
+                    if(a[j] == result)
+                    {
+                        hasEquals = true;
+                        a[j] = null;
+                        break;
+                    }   
+                }
+
+                if (!hasEquals)
+                {
+                    arraysAreEquals = false;
+                }
+            }
+
+            var message = arraysAreEquals ? "Os arrays são iguais" : "Os arrays são diferentes";
+            System.Console.WriteLine(message);
+		}
+
 		static void Main(string[] args)
 		{
-            Exercise2();
+            Exercise4();
 		}
 	}
 }

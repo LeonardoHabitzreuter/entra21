@@ -31,6 +31,9 @@
     // Tipo Data/DateTime
     var currentDate = DateTime.Now;
 
+    // Tipo Nullable Double
+    double? x = null;
+
     // Lista/Array de 1 posição
     var names = new string[1];
     names[0] = "Lucas";
