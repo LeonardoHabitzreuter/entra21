@@ -18,7 +18,19 @@ namespace arrays
             for (int i = 0; i < arraysLenght; i++)
             {
                 System.Console.WriteLine("Digite um valor:");
-                a[i] = Double.Parse(Console.ReadLine());
+
+                while (true)
+                {
+                    try
+                    {
+                        a[i] = Double.Parse(Console.ReadLine());
+                        break;
+                    }
+                    catch (System.Exception)
+                    {
+                        System.Console.WriteLine("Número inválido, digite outro valor");
+                    }
+                }
             }
 
             System.Console.WriteLine($"Digite os próximos {arraysLenght} valores");
@@ -29,6 +41,12 @@ namespace arrays
                 var result = Double.Parse(Console.ReadLine());
                 b[i] = result;
                 c[i] = a[i] - result;
+            }
+
+            System.Console.WriteLine("Resultado:");
+            foreach (var item in c)
+            {
+                System.Console.WriteLine(item);
             }
 		}
 
@@ -140,7 +158,7 @@ namespace arrays
 
 		static void Main(string[] args)
 		{
-            Exercise4();
+            Exercise1();
 		}
 	}
 }
