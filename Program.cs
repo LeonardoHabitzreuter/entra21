@@ -227,7 +227,7 @@ namespace getting_started
 
 		static void Exercise13()
 		{
-            var biggestNumber = 0;
+            var biggestNumber = Double.MinValue;
 
             for (int counter = 0; counter < 10; counter++)
             {
@@ -299,7 +299,7 @@ namespace getting_started
         
         static void Main(string[] args)
 		{
-            Exercise6();
+            Exercise13();
 		}
 	}
 }
