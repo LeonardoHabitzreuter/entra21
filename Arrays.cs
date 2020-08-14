@@ -143,7 +143,7 @@ namespace arrays
                         hasEquals = true;
                         a[j] = null;
                         break;
-                    }   
+                    }
                 }
 
                 if (!hasEquals)

@@ -190,6 +190,10 @@
         System.Console.WriteLine("O números está em formato inválido");
     }
 
+### Métodos
+    // Retornando de um método:
+    return;
+
 ### Comandos do editor
 Selecionando o texto:
 Segurar a tecla shift e utilizar as setas

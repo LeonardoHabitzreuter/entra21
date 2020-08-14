@@ -277,6 +277,38 @@ namespace getting_started
             System.Console.WriteLine(greater);
 		}
 
+        static void Exercise16()
+        {
+            System.Console.WriteLine("Digite seu sálario");
+            var input = double.Parse(Console.ReadLine());
+ 
+            if(input <= 600)
+            {
+                System.Console.WriteLine("isento de imposto");
+                return;
+            }
+
+            if(input <= 1200)
+            {
+                var salary = input * 0.8;
+                System.Console.WriteLine($"Seu salário líquido é: R${salary.ToString("0.00")}");
+                return;
+            }
+ 
+            if(input <= 2000)
+            {
+                var salary = input * 0.75;
+                System.Console.WriteLine($"Seu salário líquido é: R${salary.ToString("0.00")}");
+                return;
+            }
+            
+            if(input > 2000)
+            {
+                var salary = input * 0.7;
+                System.Console.WriteLine($"Seu salário líquido é: R${salary.ToString("0.00")}");
+            }
+        }
+
 		static void Exercise17()
 		{
             while (true)
@@ -299,7 +331,7 @@ namespace getting_started
         
         static void Main(string[] args)
 		{
-            Exercise13();
+            Exercise16();
 		}
 	}
 }
