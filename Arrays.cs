@@ -1,17 +1,18 @@
 ﻿using System;
+using System.Text;
 
 namespace arrays
 {
 	class Array
 	{
-
 		static void Exercise1()
 		{
-            const int arraysLenght = 15;
+            const int arraysLenght = 3;
             
             var a = new double[arraysLenght];
             var b = new double[arraysLenght];
             var c = new double[arraysLenght];
+            var output = new StringBuilder();
 
             System.Console.WriteLine($"Digite os {arraysLenght} primeiros valores");
 
@@ -41,13 +42,11 @@ namespace arrays
                 var result = Double.Parse(Console.ReadLine());
                 b[i] = result;
                 c[i] = a[i] - result;
+                output.Append($"{c[i]} ");
             }
 
-            System.Console.WriteLine("Resultado:");
-            foreach (var item in c)
-            {
-                System.Console.WriteLine(item);
-            }
+            System.Console.WriteLine("Resultados:");
+            System.Console.WriteLine(output);
 		}
 
 		static void Exercise2()
