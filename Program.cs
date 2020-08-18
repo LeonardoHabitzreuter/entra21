@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace getting_started
 {
@@ -331,7 +332,30 @@ namespace getting_started
         
         static void Main(string[] args)
 		{
-            Exercise16();
+            var exercises = new List<Action>()
+            {
+                Exercise1,
+                Exercise2,
+                Exercise3,
+                Exercise4,
+                Exercise5,
+                Exercise6,
+                Exercise9,
+                Exercise11,
+                Exercise13,
+                Exercise14,
+                Exercise16,
+                Exercise17,
+            };
+
+            System.Console.WriteLine("Escolha um dos exercícios");
+            for (int i = 0; i < exercises.Count; i++)
+            {
+                System.Console.WriteLine(i + 1);
+            }
+            
+            var input = Int32.Parse(Console.ReadLine());
+            exercises[input]();
 		}
 	}
 }
