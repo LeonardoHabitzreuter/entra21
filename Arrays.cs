@@ -155,9 +155,48 @@ namespace arrays
             System.Console.WriteLine(message);
 		}
 
+        static void Exercise5()
+        {
+            var numbers = new double[15];
+            var sum = 0.0;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                System.Console.WriteLine("Digite um número");
+                var input = Double.Parse(Console.ReadLine());
+                numbers[i] = input;
+                sum += input;
+            }
+
+            var average = sum / numbers.Length;
+            var greater = 0;
+            var equals = 0;
+            var lesser = 0;
+
+            foreach (var item in numbers)
+            {
+                if (item > average)
+                {
+                    greater++;
+                }
+                else if (item == average)
+                {
+                    equals++;
+                }
+                else
+                {
+                    lesser++;
+                }
+            }
+
+            System.Console.WriteLine($"{equals} elementos estão na média");
+            System.Console.WriteLine($"{greater} elementos estão acima da média");
+            System.Console.WriteLine($"{lesser} elementos estão abaixo da média");
+        }
+
 		static void Main(string[] args)
 		{
-            Exercise1();
+            Exercise5();
 		}
 	}
 }
