@@ -278,6 +278,25 @@ namespace getting_started
             System.Console.WriteLine(greater);
 		}
 
+		static void Exercise7()
+		{
+            System.Console.WriteLine("Você é catarinense?");
+            bool input1 = Console.ReadLine() == "sim";
+
+            System.Console.WriteLine("Você é catarinense?");
+            bool input2 = Console.ReadLine() == "sim";
+
+            var answersAreDifferents = input1 ^ input2;
+            if(answersAreDifferents)
+            {
+                System.Console.WriteLine("Respostas diferentes");
+            }
+            else
+            {
+                System.Console.WriteLine("Respostas iguais");
+            }
+		}
+
         static void Exercise16()
         {
             System.Console.WriteLine("Digite seu sálario");
@@ -340,6 +359,7 @@ namespace getting_started
                 Exercise4,
                 Exercise5,
                 Exercise6,
+                Exercise7,
                 Exercise9,
                 Exercise11,
                 Exercise13,
@@ -355,7 +375,7 @@ namespace getting_started
             }
             
             var input = Int32.Parse(Console.ReadLine());
-            exercises[input]();
+            exercises[input - 1]();
 		}
 	}
 }

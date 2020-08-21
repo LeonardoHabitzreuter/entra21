@@ -76,6 +76,9 @@
     false || false || true;
     // vai retornar true
 
+    // XOR - Verificando se dois booleanos são diferentes
+    // a ^ b
+
     // Operador ternário
     var myBool = true;
     var message = myBool ? "Solteiro" : "Não solteiro";
