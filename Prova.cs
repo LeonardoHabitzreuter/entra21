@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace getting_started
@@ -8,13 +7,20 @@ namespace getting_started
 	{
         static void Question1()
         {
-            Console.WriteLine("Quantas horas (com minutos) você trabalha por dia?");
-            var timeWorking = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Quantas horas você trabalha por dia?");
+            var workHours = Int32.Parse(Console.ReadLine());
+            
+            Console.WriteLine("Quantos minutos você trabalha por dia?");
+            var minutesWorking = Double.Parse(Console.ReadLine());
+
+            var wholeTime = workHours + (minutesWorking / 60);
+            
             System.Console.WriteLine("Qual o seu valor/hora?");
             var workPrice = Double.Parse(Console.ReadLine());
-            var dayEarn = (timeWorking * workPrice).ToString("0.00");
 
-            System.Console.WriteLine($"Você ganha {dayEarn} em um dia trabalhado");
+            var dayPrice = (wholeTime * workPrice).ToString("0.00");
+
+            System.Console.WriteLine($"Você ganha {dayPrice} em um dia trabalhado");
         }
 
         static void Question2()
@@ -56,22 +62,30 @@ namespace getting_started
 
         static void Question4()
         {
-            var singleMen = new StringBuilder();
+            var input = 0;
 
-            for (int i = 0; i < 5; i++)
+            System.Console.WriteLine("Qual o ano em que você nasceu?");
+            while(true)
             {
-                Console.WriteLine("Digite seu nome");
-                var name = Console.ReadLine();
-                Console.WriteLine("Você é solteiro?");
-                var isSingle = Console.ReadLine();
-                if (isSingle == "sim")
+                try
                 {
-                    singleMen.Append($"{name}, ");
+                    input = Int32.Parse(Console.ReadLine());
+                    break;
+                }
+                catch (System.Exception)
+                {
+                    System.Console.WriteLine("Ano inválido! Informe novamente");
                 }
             }
-
-            singleMen.Remove(singleMen.Length - 2, 2);
-            Console.WriteLine($"Todos os solteiros: {singleMen}");
+            
+            if (input <= 2002)
+            {
+                System.Console.WriteLine("Você é maior de idade!");
+            }
+            else
+            {
+                System.Console.WriteLine("Você é menor de idade!");
+            }
         }
 
         public static void Main()
