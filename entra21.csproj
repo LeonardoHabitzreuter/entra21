@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>getting_started.Program</StartupObject>
+    <!-- <StartupObject>getting_started.Program</StartupObject> -->
+    <StartupObject>getting_started.Prova</StartupObject>
     <!-- <StartupObject>arrays.Array</StartupObject> -->
   </PropertyGroup>
 
