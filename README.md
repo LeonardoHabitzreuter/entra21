@@ -34,11 +34,15 @@
     // Tipo Nullable Double
     double? x = null;
 
-    // Lista/Array de 1 posição
+    // Array de 1 posição
     var names = new string[1];
     names[0] = "Lucas";
     // names terá o valor Lucas na posição de número 0
 
+    // Lista
+    var names = new List<string>(){"Maria"};
+    names.Add("Lucas");
+    // a lista conterá o nome Maria na primeira posição e o nome Lucas na segunda
     
     // Tupla/Tuple
     (string name, int votes) firstCandidate = ("", 0)
