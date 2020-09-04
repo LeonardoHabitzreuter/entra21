@@ -232,3 +232,8 @@ CTRL + '
 8. F5 para o próximo breakpoint
 9. Shift + F5 para "matar" a aplicação
 10. CTRL + Shift + F5 para reiniciar o debug
+
+### Limpar os binarios e restaurar os pacotes nuget
+
+    dotnet clean
+    dotnet restore
