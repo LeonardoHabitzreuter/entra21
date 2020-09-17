@@ -41,8 +41,6 @@
 
     // Lista
     var names = new List<string>(){"Maria"};
-    names.Add("Lucas");
-    // a lista conterá o nome Maria na primeira posição e o nome Lucas na segunda
     
     // Tupla/Tuple
     (string name, int votes) firstCandidate = ("", 0)
@@ -57,6 +55,10 @@
     // Formatar número/double para até duas casas decimais após a vírgula
     25.658499.ToString("0.00")
     // 25.66
+
+    // TransformarIEnumerable para List
+    IEnumerable<int> numbers = new int[2]{1, 2};
+    List<int> myList = numbers.ToList();
 
 ### Operadores de comparação
 #### (toda comparação retorna um booleano/bool)
@@ -200,6 +202,14 @@
 ### Métodos
     // Retornando de um método:
     return;
+
+### Métodos das coleções
+    // Adicionar elemento no final da coleção
+    collection.Add(element);
+    
+    // transformar uma coleção de inteiros em coleção de strings
+    var collection = new List<int>{1, 2};
+    IEnumerable<string> newCollection = collection.Select(item => item.ToString());
 
 ### Comandos do editor
 Selecionando o texto:
