@@ -210,6 +210,22 @@
     // transformar uma coleção de inteiros em coleção de strings
     var collection = new List<int>{1, 2};
     IEnumerable<string> newCollection = collection.Select(item => item.ToString());
+    
+    // obter o primeiro candidato chamado "Mary"
+    var candidates = new List<(Guid id, string name)>
+    {
+        (Guid.NewGuid(), "Mary"),
+        (Guid.NewGuid(), "Mary")
+    };
+    var mary = candidates.First(x => x.name == "Mary");
+   
+    // obter todas as candidatas "Mary"
+    var candidates = new List<(Guid id, string name)>
+    {
+        (Guid.NewGuid(), "Mary"),
+        (Guid.NewGuid(), "Mary")
+    };
+    var bothMary = candidates.Where(x => x.name == "Mary");
 
 ### Comandos do editor
 Selecionando o texto:
